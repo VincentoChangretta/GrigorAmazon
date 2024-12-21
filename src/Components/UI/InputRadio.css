@@ -1,0 +1,15 @@
+.radio-checkmark {
+  @apply w-[20px] h-[20px] border-[2px] border-solid border-[#ccc] rounded-full transition-all duration-150
+}
+
+.radio-container input:checked + .radio-checkmark {
+  @apply border-[#FF9500]
+}
+
+.radio-checkmark::after {
+  @apply content-[""] w-[12px] h-[12px] rounded-full bg-transparent absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 transition-all duration-150 
+}
+
+.radio-container input:checked + .radio-checkmark::after {
+  @apply bg-[#FF9500]; /* Цвет внутреннего круга при выборе */
+}
